@@ -1,4 +1,6 @@
 # pico-and-hub75-led-matrix
+[![Watch the video](https://img.youtube.com/vi/Gocp5tGlDXI/hqdefault.jpg)](https://youtu.be/Gocp5tGlDXI)
+
 Board - Any Raspberry Pi Pico, including the original, will run this code.
 Wiring is the same for all boards
 Drag files & folders onto a Pico configured with the latest CircuitPython from CircuitPython.org. The "lib" folder shows you which libraries are used, but I'd STRONGLY advise downloading the newest version from CircuitPython.org. If you're new to CircuitPython and will do more projects, use CIRCUP. All tutorials for the University Course I teach to new-to-coding/new-to-electronics students is at: https://bit.ly/circuitpython-school. Pico only at https://bit.ly/pico-school
