@@ -1,6 +1,7 @@
 # pico-and-hub75-led-matrix
 Board - Any Raspberry Pi Pico, including the original, will run this code.
 Wiring is the same for all boards
+Drag files & folders onto a Pico configured with the latest CircuitPython from CircuitPython.org. The "lib" folder shows you which libraries are used, but I'd STRONGLY advise downloading the newest version from CircuitPython.org. If you're new to CircuitPython and will do more projects, use CIRCUP. All tutorials for the University Course I teach to new-to-coding/new-to-electronics students is at: https://bit.ly/circuitpython-school. Pico only at https://bit.ly/pico-school
 
 Dispaly - most HUB75 64 x 32 displays should work. Beware ultra-cheap boards. Double-check if it's been used with CircuitPython / Raspberry Pi Pico projects. Two examples below (there are many other sizes at these & different stores)
 Adafruit sells these (I love Adafruit - high quality - great support): https://www.adafruit.com/product/2278 
