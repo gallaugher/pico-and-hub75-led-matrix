@@ -22,7 +22,7 @@ The code for this is only slightly different (and easier). AI can write the diff
 https://youtu.be/hb2HtoIEXM8?si=B6loUfyd5mQOX45j and
 https://youtu.be/OV67IjXsQbA?si=ETBBG7LJgcw_CoTv
 
-Wiring &amp; code to run a "Happy Graduation" on a Raspberry Pi Pico with a 64 x 32 HUB75 LED Matrix DIsplay
-<img width="1600" alt="Pico HUB75 Wiring Diagram" src="https://github.com/user-attachments/assets/bba8c013-189a-4fa8-8dd4-cd31d79a5720" />
-<img width="1440" alt="pico and 64x32 LED HUB75 wiring photo" src="https://github.com/user-attachments/assets/b7218c14-fc9f-484b-b537-99110c113a76" />
+Wiring &amp; code to run a "Happy Graduation" on a Raspberry Pi Pico with a 64 x 32 HUB75 LED Matrix Display
+![Pico HUB75 Wiring Diagram](https://github.com/user-attachments/assets/d00afd63-ca34-4f65-a2f5-37aca9885d04)
+![pico and 64x32 LED HUB75 wiring photo](https://github.com/user-attachments/assets/ad1b957d-1072-4f63-9da2-bb0b31e8d256)
 
