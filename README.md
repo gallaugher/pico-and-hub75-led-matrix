@@ -24,6 +24,8 @@ https://www.adafruit.com/product/368
 
 A microUSB cable & a power supply for the pico if you plan to run it when not connected to your computer. If you've been working with a pico you probably have these.
 
+And if you prefer to diffuse the LEDs for a more "square" look to the pixels that also aren't as garishly bright, you can cover the display with diffusion acrylic like this: https://www.adafruit.com/product/4594
+
 Drag files & folders onto a Pico configured with the latest CircuitPython from CircuitPython.org (if you donn't know how to set up a pico with CircuitPython see the lesson at https://bit.ly/pico-school). The "lib" folder above shows you which libraries are used, but I'd STRONGLY advise downloading the newest version from CircuitPython.org. If you're new to CircuitPython and will do more projects, use CIRCUP. There is a lesson in pico-school on circup, as well. All tutorials for the University Course I teach to new-to-coding/new-to-electronics students is at: https://bit.ly/circuitpython-school. Pico only at https://bit.ly/pico-school
 
 CONSIDERATION: As mentioned, you might consider the super-easy setup of buying an Adafruit MatrixPortal S3 (go for the S3 and not the M4, the S3 is newer, more capable with more storage, and cheaper). Using a Matrix Portal S3 allows you to use just one USB-style power supply (which you probably have laying around the house, for mobile phones, etc) and one USB-C cable to power both the board & the display. At the time I created this, that board was only $19.95 US at Adafruit: https://www.adafruit.com/product/5778
