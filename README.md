@@ -1,5 +1,5 @@
 # pico-and-hub75-led-matrix
-[![Watch the video]([https://img.youtube.com/vi/Gocp5tGlDXI/hqdefault.jpg)]([https://youtu.be/Gocp5tGlDXI](https://youtu.be/XzjYWSvCipk))
+[![Watch the video](https://img.youtube.com/vi/XzjYWSvCipk/hqdefault.jpg)](https://youtu.be/XzjYWSvCipk)
 
 Board - Any Raspberry Pi Pico, including the original, will run this code.
 Wiring is the same for all Raspberry Pi Pico-family boards. If you're buying a new board, I'd get the most powerful veresion (at the time I'm writing this, that's the Pico 2 WH). 
