@@ -17,7 +17,7 @@ from adafruit_display_text.label import Label
 
 displayio.release_displays()
 
-# === Setup ===
+# === Setup for Matrix Portal S3 ===
 # matrixportal = MatrixPortal(status_neopixel=board.NEOPIXEL, bit_depth=6, debug=True)
 # display = matrixportal.graphics.display
 
