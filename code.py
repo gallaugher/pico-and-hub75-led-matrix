@@ -1,26 +1,30 @@
-import board
-import displayio
-import time
-import gc
-import random
-import math
+# Code to run fireworks animation, then scrolling marquees
+# of text surrounded by icons.
+# Video to set up this code can be found in the playlist:
+# https://bit.ly/pico-school
+# Diagram & files/folders at: https://github.com/gallaugher/pico-and-hub75-led-matrix
+# Icons are stored in a folder named "graphics" on the CIRCUITPY volume,
+# .bdf fonts are stored ina  folder named "fonts"
+# For pico use, the "lib" folder needs:
+# folders named: adafruit_bitmap_font & adafruit_display_text
+# and the library named adafruit_ticks.mpy
+
+import board, displayio, time, gc, random, math, rgbmatrix, framebufferio
+# If you use a Matrix Portal S3, you'll need to import the coe below,
 # from adafruit_matrixportal.matrixportal import MatrixPortal
-import rgbmatrix
-import framebufferio
 from adafruit_bitmap_font import bitmap_font
 from adafruit_display_text.label import Label
-
-print("*** I am running! ***")
 
 displayio.release_displays()
 
 # === Setup ===
 # matrixportal = MatrixPortal(status_neopixel=board.NEOPIXEL, bit_depth=6, debug=True)
 # display = matrixportal.graphics.display
+
 # === Setup for Pico ===
 # Setup rgbmatrix display (change pins to match your wiring)
 matrix = rgbmatrix.RGBMatrix(
-    width=64,
+    width=64, # Change width & height if you have an LED matrix with different dimensions
     height=32,
     bit_depth=6,
     rgb_pins=[ # Preserve GP4 & GP5 for standard STEMMA-QT
@@ -46,6 +50,7 @@ matrix = rgbmatrix.RGBMatrix(
 )
 
 display = framebufferio.FramebufferDisplay(matrix)
+# === end of pico setup === #
 
 WIDTH = display.width
 HEIGHT = display.height
@@ -79,15 +84,17 @@ SCROLL_DELAY = 0.025
 SCROLL_STEP = 1
 
 # === Messages: (line1, line2, image_path, optional_color)
+# You can add or remove elements from the messages lists, as you like.
+# Add a second line of text in the empty strings for a two-line message in smaller font
 messages = [
-    ("Congratulations Graduates!", "", "/graphics/white-grad-cap.bmp", GOLDENROD),
-    ("Soar!", "", "/graphics/bc-logo.bmp", SOFT_RED),
+    ("Congratulations Maker!", "", "/graphics/tools.bmp", GOLDENROD),
+    ("You Built It!", "", "/graphics/raspberry-pi-logo.bmp", SOFT_RED),
 ]
 
 def create_scroll_group(logo_path, text1, text2, color=None):
     group = displayio.Group()
     logo_width = 0
-    logo_spacing = 35
+    logo_spacing = 33
     logo_tilegrid = None
 
     if color:
@@ -223,7 +230,7 @@ def fireworks_animation(duration=2.5, burst_count=5, sparks_per_burst=40):
     main_group.remove(animation_group)
     gc.collect()
 
-print("Running Marquee Code!")
+print("*** Running Pico HUB75 Code! ***")
 
 # === Main Loop ===
 while True:
