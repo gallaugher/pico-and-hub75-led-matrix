@@ -9,10 +9,18 @@ import rtc
 import supervisor
 import microcontroller
 
+try:
+    import microcontroller
+    microcontroller.watchdog.timeout = 30
+    microcontroller.watchdog.mode = microcontroller.WatchDogMode.RESET
+    microcontroller.watchdog.feed()
+except AttributeError:
+    print("Watchdog not supported on this board.")
+
 displayio.release_displays()
 
 # === Simplified setup for MatrixPortal S3 with TWO 64x32 TILED PANELS (128x32 total) ===
-matrixportal = MatrixPortal(width=128, height=32, bit_depth=5)
+matrixportal = MatrixPortal(width=128, height=32, bit_depth=4)
 display = matrixportal.graphics.display
 
 WIDTH = display.width
@@ -197,6 +205,7 @@ def fireworks_animation(duration=2.5, burst_count=5, sparks_per_burst=40):
             b = int((spark["color"] & 0xFF) * fade)
             spark["sprite"].pixel_shader[0] = (r << 16) | (g << 8) | b
 
+        microcontroller.watchdog.feed()
         time.sleep(0.05)
 
     main_group.remove(animation_group)
@@ -221,6 +230,7 @@ while True:
 
                 while scroll_group.x > -content_width - 32:
                     scroll_group.x -= SCROLL_STEP
+                    microcontroller.watchdog.feed()
                     time.sleep(SCROLL_DELAY)
 
                 main_group.remove(scroll_group)
@@ -234,7 +244,6 @@ while True:
                 gc.collect()
                 time.sleep(1)
 
-        # Daily auto-reset at 4:00 AM Eastern
         current_time = time.localtime()
         if current_time.tm_hour == 4 and current_time.tm_min == 0:
             if last_reset_day != current_time.tm_mday:
